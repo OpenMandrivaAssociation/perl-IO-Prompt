@@ -1,7 +1,7 @@
 
 %define realname   IO-Prompt
 %define version    v0.99.4
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{realname}
 Version:    %{version}
