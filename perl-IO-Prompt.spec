@@ -1,27 +1,26 @@
+%define upstream_name    IO-Prompt
+%define upstream_version 0.996
 
-%define realname   IO-Prompt
-%define version    v0.99.4
-%define release    %mkrel 3
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Interactively prompt for user input
-Source:     http://www.cpan.org/modules/by-module/IO/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(IO::Handle)
 BuildRequires: perl(POSIX)
 BuildRequires: perl(Term::ReadKey)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Want)
+
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-
 By default, this module exports a single function 'prompt'. It prompts the
 user to enter some input, and returns an object that represents the user
 input.
@@ -35,14 +34,14 @@ hand-typing to the console; and 'get_input', which is the lower-level
 function that actually prompts the user for a suitable input.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %{buildroot}
@@ -56,4 +55,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/IO
-
