@@ -35,6 +35,8 @@ function that actually prompts the user for a suitable input.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+# requires /dev/tty
+rm t/01.dependencies.t
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
