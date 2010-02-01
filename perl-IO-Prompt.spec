@@ -1,5 +1,5 @@
 %define upstream_name    IO-Prompt
-%define upstream_version 0.996
+%define upstream_version 0.997
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
