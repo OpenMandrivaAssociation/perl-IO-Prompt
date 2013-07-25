@@ -1,15 +1,15 @@
 %define upstream_name    IO-Prompt
-%define upstream_version 0.997001
+%define upstream_version 0.997002
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.997002
+Release:	1
 
 Summary:	Interactively prompt for user input
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/IO/IO-Prompt-0.997002.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(IO::Handle)
@@ -83,3 +83,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Tue Apr 15 2008 Guillaume Rousse <guillomovitch@mandriva.org> v0.99.4-1mdv2009.0
 - first mdv release
+
