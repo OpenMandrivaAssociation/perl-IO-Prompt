@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.997002
-Release:	1
+Release:	2
 
 Summary:	Interactively prompt for user input
 License:	GPL+ or Artistic
