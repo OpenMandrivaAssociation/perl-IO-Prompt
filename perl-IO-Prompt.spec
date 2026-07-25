@@ -1,15 +1,15 @@
 %define upstream_name    IO-Prompt
-%define upstream_version 0.997002
+%define upstream_version 0.997004
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.997002
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Interactively prompt for user input
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/IO/IO-Prompt-0.997002.tar.gz
+Url:		https://metacpan.org/dist/IO-Prompt
+Source0:	https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/IO-Prompt-0.997004.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
