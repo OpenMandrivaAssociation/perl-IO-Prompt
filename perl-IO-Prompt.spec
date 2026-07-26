@@ -1,9 +1,7 @@
 %define upstream_name    IO-Prompt
-%define upstream_version 0.997004
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.997004
+Release:	2
 
 Summary:	Interactively prompt for user input
 License:	GPL+ or Artistic
@@ -35,7 +33,7 @@ hand-typing to the console; and 'get_input', which is the lower-level
 function that actually prompts the user for a suitable input.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 # requires /dev/tty
 rm t/01.dependencies.t
 
